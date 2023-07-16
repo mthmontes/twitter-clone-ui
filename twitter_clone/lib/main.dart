@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, sort_child_properties_last
 
 import 'package:flutter/material.dart';
 
@@ -13,12 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Twitter',
-      theme: ThemeData(
-        primaryColor: Color(0xff1DA1F2),
-        fontFamily: 'Sora',
-      ),
-      home: const HomePage(),
+      home: HomePage(),
     );
   }
 }
@@ -39,27 +34,28 @@ class HomePage extends StatelessWidget {
               height: 66,
               width: 80,
             ),
+            SizedBox(
+              height: 40,
+            ),
             Padding(
               padding: EdgeInsets.only(left: 40),
               child: Text('Welcome to Twitter. What\'d you like to do?',
                   style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 30,
-                  )),
+                      color: Colors.white, fontSize: 30, fontFamily: 'Roboto')),
             ),
             SizedBox(
-              height: 30,
+              height: 40,
             ),
             TextButton(
               onPressed: () {},
-              child: Text('Sign in!'),
+              child: Text('Sign In'),
               style: TextButton.styleFrom(
-                textStyle: TextStyle(fontSize: 15, fontFamily: "Sora"),
+                textStyle: TextStyle(fontSize: 15),
                 padding: EdgeInsets.all(15),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20),
+                  borderRadius: BorderRadius.circular(15),
                 ),
-                fixedSize: Size.fromWidth(260),
+                fixedSize: Size.fromWidth(280),
                 backgroundColor: Colors.white,
               ),
             ),
@@ -68,15 +64,16 @@ class HomePage extends StatelessWidget {
             ),
             TextButton(
               onPressed: () {},
-              child: Text('Sign out!'),
+              child: Text('Sign Up'),
               style: TextButton.styleFrom(
                 foregroundColor: Colors.white,
                 textStyle: TextStyle(fontSize: 15),
                 padding: EdgeInsets.all(15),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20),
+                  side: BorderSide(color: Colors.white),
+                  borderRadius: BorderRadius.circular(15),
                 ),
-                fixedSize: Size.fromWidth(260),
+                fixedSize: Size.fromWidth(280),
                 backgroundColor: Color(0xff1DA1F2),
               ),
             ),
