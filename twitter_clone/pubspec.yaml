@@ -59,9 +59,6 @@ flutter:
   fonts:
     - family: Roboto
       fonts:
-        - asset: assets/fonts/Roboto-Thin.ttf
+        - asset: assets/fonts/Roboto-Bold.ttf
 
-  fonts:
-    - family: Chirp
-      fonts:
-        - asset: assets/fonts/chirp_bold.ttf
+
