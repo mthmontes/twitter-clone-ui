@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, sort_child_properties_last
 
 import 'package:flutter/material.dart';
+import 'package:twitter_clone/next_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -63,7 +64,10 @@ class HomePage extends StatelessWidget {
               height: 30,
             ),
             TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: ((context) => SingUpScreen())));
+              },
               child: Text('Sign Up'),
               style: TextButton.styleFrom(
                 foregroundColor: Colors.white,
